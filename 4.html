@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="4.css">
+    <style>
+        #sidebarToggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 200;
+            background: #4ca3af;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 2rem;
+            padding: 4px 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        #sidebarToggle:focus {
+            outline: none;
+        }
+
+        #sidebar {
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+        }
+
+        #sidebar.closed {
+            transform: translateX(-200px);
+        }
+
+        #closeSidebar {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        body.sidebar-closed {
+            margin-left: 0;
+        }
+
+        body {
+            transition: margin-left 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <button id="sidebarToggle">&#9776;</button>
+    <div id="header">
+        <div id="sidebar">
+            <nav id="navbar">
+                <button>About me</button>
+                <button>Projects</button>
+                <button>Contact</button>
+                <button>Resume</button>
+            </nav>
+        </div>
+        <h1>Jagdeep Singh <br> Software Developer</h1>
+        <img src="me.png" id="dp" alt="Profile Picture">
+    </div>
+    <div id="main-content">
+        <!-- Your remaining page content goes here -->
+        <div id="toggle-box" class="hidden">
+            <p>I'm a passionate web developer with a love for creating dynamic and user-friendly websites. I enjoy learning new technologies and improving my skills.I am looking for a challenging role in a reputable organization to utilize my technical, database, and management skills for growth and enhance my knowledge about new and emerging trends in the IT sector. I am passionate about programming, web development, and problem-solving, and I am eager to connect with professionals in the tech industry for potential collaborations and opportunities.</p>
+        </div>
+    </div>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+        const body = document.body;
+        const mainContent = document.getElementById('main-content'); // reference our container
+
+        // Toggle sidebar open/close
+        function toggleSidebar() {
+            sidebar.classList.toggle('closed');
+            // Toggle a class on the main content instead of the body
+            mainContent.classList.toggle('sidebar-closed');
+        }
+
+        sidebarToggle.addEventListener('click', toggleSidebar);
+
+        // Optional: Auto-close sidebar on small screens
+        if (window.innerWidth < 700) {
+            sidebar.classList.add('closed');
+            mainContent.classList.add('sidebar-closed');
+        }
+
+        const navbarButtons = document.querySelectorAll('#navbar button');
+        const toggleBox = document.getElementById('toggle-box');
+
+        // Add event listeners to each button
+        navbarButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                toggleBox.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

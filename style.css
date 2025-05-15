@@ -1,0 +1,478 @@
+body {
+  background-position: center;
+  background-image: url('back.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+h1 {
+  text-align: center;
+  
+}
+button {
+  background-color: #4ca3af;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+button:hover {
+  background-color: #457ba0;
+}
+.box {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transform: translateY(-20px);
+  padding: 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  visibility: hidden;
+}
+
+.box.open {
+  max-height: none;
+  height: auto;
+  padding: 20px;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+img {
+    width: 300px;   
+}
+img:hover {
+    transform: scale(1.02);
+}
+.name {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #457ba0;
+  border-radius: 100px;
+}
+.name:hover {
+    transform: scale(1.02);
+  }
+.dis{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(0, 89, 116);
+    border-radius: 10px;
+    width: 200px;
+}
+.dis:hover {
+    transform: scale(1.02);
+}
+.card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin: 20px auto; /* Increased margin */
+    max-width: 100%;
+    padding: 15px; /* Added padding around the card */
+    text-align: center;
+}
+  
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-right: 1px solid #ddd;
+}
+
+.card-text {
+    padding: 25px; /* Increased padding */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  /* Added for horizontal centering */
+    gap: 15px; /* Added gap between elements */
+    text-align: center;  /* Added for text alignment */
+}
+
+.card-text h2 {
+    margin: 0 0 15px; /* Increased bottom margin */
+    color: #333;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 5px 0; /* Added vertical padding */
+}
+
+.card-text p {
+    color: #666;
+    padding: 5px 0; /* Added vertical padding */
+    margin: 0;
+    line-height: 1.5; /* Improved line height for better readability */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#t1{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Update box2 table styles */
+#box2 th {
+  padding: 10px;
+  background-color: #457ba0;
+  color: white;
+  border-radius: 5px;
+  margin: 5px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+#box4 .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Added for horizontal centering */
+}
+
+#box4 .card-text {
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .box {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #t1 {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px; /* Adjusted padding for mobile */
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .card-text {
+    text-align: center;
+    padding: 20px; /* Adjusted padding for mobile */
+  }
+
+  .dis {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  table td {
+    display: block;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Add these new styles for box2 table */
+  #box2 table {
+    width: 100%;
+  }
+
+  #box2 th, 
+  #box2 td {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  #box2 tr {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  /* Add these new styles for box4 content */
+  #box4 .card {
+    flex-direction: column;
+  }
+
+  #box4 .card-text {
+    text-align: center;
+  }
+
+  #box4 .card-text h2 {
+    font-size: 16px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  #box4 .card-text a {
+    display: inline-block;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    word-break: break-all;
+  }
+
+  .form-container {
+    padding: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .form-group textarea {
+    height: 120px;
+  }
+
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  #box5 {
+    width: 95%;
+    padding: 10px;
+  }
+
+  #box5 .card {
+    padding: 10px;
+  }
+
+  .radio-group,
+  .checkbox-group {
+    gap: 15px;
+  }
+
+  .radio-group label,
+  .checkbox-group label {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .name h1 {
+    font-size: 20px;
+  }
+
+  .box {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 8px; /* Further reduced padding for smaller screens */
+  }
+
+  .card-text {
+    text-align: center;
+    padding: 15px; /* Further reduced padding for smaller screens */
+  }
+
+  .card-text h2 {
+    font-size: 20px;
+  }
+
+  .card-text p {
+    font-size: 14px;
+  }
+
+  #box4 .card-text h2 {
+    font-size: 14px;
+  }
+
+  .form-container {
+    padding: 5px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .form-group textarea {
+    height: 100px;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  #box5 {
+    width: 100%;
+    padding: 5px;
+  }
+
+  #box5 .card {
+    padding: 5px;
+  }
+
+  #box5 h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .radio-group,
+  .checkbox-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Update box5 and form styles */
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#box5 .card {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #4ca3af;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #4ca3af;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #457ba0;
+}
+
+/* Radio and Checkbox Groups: align items in a row */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.radio-label,
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    .radio-label,
+    .checkbox-label {
+        font-size: 14px;
+    }
+}

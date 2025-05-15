@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Hello World! Hope You Are Doing Fine</h1>
+  <center>
+    <div>
+      <table>
+        <tr id="t1">
+          <td><button type="button" data-target="box">About me</button></td>
+          <td><button type="button" data-target="box2">Skills</button></td>
+          <td><button type="button" data-target="box3">Projects</button></td>
+          <td><button type="button" data-target="box4">Contact</button></td>
+          <td><button type="button" data-target="box5">Inquiry</button></td>
+        </tr>
+      </table>
+
+      <div id="box" class="box">
+        <table>
+            <tr>
+                <td rowspan="2"><img src="me.png" alt="My pic"></td>
+                <td class="name"><h1>Jagdeep Singh</h1></td>
+            </tr>   
+            <tr><td colspan="2"><h4>I'm a passionate web developer with a love for creating dynamic and user-friendly websites. I enjoy learning new technologies and improving my skills.I am looking for a challenging role in a reputable organization to utilize my technical, database, and management skills for growth and enhance my knowledge about new and emerging trends in the IT sector. I am passionate about programming, web development, and problem-solving, and I am eager to connect with professionals in the tech industry for potential collaborations and opportunities.</h4></td></tr>
+        </table>
+      </div>
+      <div id="box2" class="box">
+        <table>
+            <tr>
+                <th>Languages</th>
+                <th>Framework</th>
+                <th>Interest</th>
+                <th>Hobbies</th>
+            </tr>
+            <tr>
+                <td><button disabled="disabled" class = "dis">Python</button></td>
+                <td><button disabled="disabled" class = "dis">Django</button></td>
+                <td><button disabled="disabled" class = "dis">Hacking</button></td>
+                <td><button disabled="disabled" class = "dis">Bike riding</button></td>
+            </tr>
+            <tr>
+              <td><button disabled="disabled" class = "dis">Javascript</button></td>
+              <td><button disabled="disabled" class = "dis">Flask</button></td>
+              <td><button disabled="disabled" class = "dis">Networks</button></td>
+              <td><button disabled="disabled" class = "dis">Exploring conspiracy theories</button></td>
+            </tr>
+            <tr>
+                <td><button disabled="disabled" class = "dis">C/C++</button></td>
+                <td><button disabled="disabled" class = "dis">React</button></td>
+                <td><button disabled="disabled" class = "dis">IOT Systems</button></td>
+                <td><button disabled="disabled" class = "dis">Watching Sci-fi movies and webseries</button></td>
+            </tr>
+            <tr>
+                <td><button disabled="disabled" class = "dis">Java</button></td>
+                <td><button disabled="disabled" class = "dis">Node JS</button></td>
+                <td><button disabled="disabled" class = "dis">Computer Hardware</button></td>
+                <td><button disabled="disabled" class = "dis">Playing online co-op video games</button></td>
+            </tr>
+            
+        </table>
+      </div>
+      <div id="box3" class="box">
+            <div class="card">
+              <img src="floor.jpg" alt="About Image">
+              <div class="card-text">
+                <h2>Flixer</h2>
+                <p>In this project i have created a video streaming application using python and django framework</p>
+              </div>
+            </div><br>
+            <div class="card">
+                <img src="floor.jpg" alt="About Image">
+                <div class="card-text">
+                  <h2>Snapify</h2>
+                  <p>In this project i have created a online social media platform using python and django</p>
+                </div>
+            </div><br>
+            <div class="card">
+              <img src="floor.jpg" alt="About Image">
+              <div class="card-text">
+                <h2>SyncXchange</h2>
+                <p>In this project i have created two seperate application for syncing the android and windows using flask and java</p>
+              </div>
+            </div><br>
+      </div>
+      <div id="box4" class="box">
+        <div class="card">
+          <img src="email_PNG100751-3064773940.png">
+          <div class="card-text" style="text-align: end;">
+            <h2>E-mail : <a href="mailto:">mailtojagdeepsingh@gmail.com </a></h2>
+          </div>
+        </div><br>
+        <div class="card">
+          <img src="phone.png">
+          <div class="card-text" style="text-align: end;">
+            <h2>Phone number: +917042258158</h2>
+          </div>
+        </div><br>
+        <div class="card">
+          <img src="linkedin.png">
+          <div class="card-text" style="text-align: end;">
+            <h2>LinkedIn : <a href="https://www.linkedin.com/in/jagdeep-singh007/">jagdeep-singh007</a></h2>
+          </div>
+        </div>
+      </div>
+      <div id="box5" class="box">
+        <div class="card">
+            <div class="form-container">
+                <h2>Make an Inquiry</h2>
+                <form id="inquiryForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Contact Method:</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="contact" value="email" required>
+                                Email
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="contact" value="phone" required>
+                                Phone
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Areas of Interest:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="web">
+                                Web Development
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="mobile">
+                                Mobile Development
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="security">
+                                Cybersecurity
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="iot">
+                                IoT
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select id="subject" name="subject" required>
+                            <option value="">Select Subject</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="project">Project Discussion</option>
+                            <option value="hiring">Job Opportunity</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </center>
+
+  <script src="script.js"></script>
+</body>
+</html>

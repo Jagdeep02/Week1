@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 1000px;
+    background-image: url(back.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+#header{
+    background-color: #4c6baf;
+    color: white;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Align items vertically */
+    justify-content: space-evenly; /* Image, name, and possible right-side content */
+    /* border: 1px solid black; */
+    position: sticky;
+    top: 0;
+    max-height: 200px;
+    margin-left: 0 !important;
+    width: 100%;
+}
+
+#header h1,
+#header h2 {
+    flex: 1;
+    text-align: center;
+    transition: margin-left 0.3s;
+    margin-left: 0;
+}
+
+/* When sidebar is open, shift the heading */
+#sidebar:not(.closed) ~ h1,
+#sidebar:not(.closed) ~ h2 {
+    margin-left: 180px; /* Same as sidebar width */
+}
+
+/* If your HTML structure is different, use this with a class on body or main-content */
+#main-content:not(.sidebar-closed) ~ #header h1,
+#main-content:not(.sidebar-closed) ~ #header h2 {
+    margin-left: 180px;
+}
+
+#dp{
+    /* border: 1px solid black; */
+    border-radius: 10%;
+    max-height: 200px;
+    width: auto;
+    margin: 0 20px;
+    display: block;
+}
+
+/* Sidebar styles */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100vh;
+    background: #4c6baf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+    z-index: 100;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+#sidebar.closed {
+    transform: translateX(-200px);
+}
+
+/* New main content container that slides */
+#main-content {
+    margin-left: 170px; /* Adjust for the sidebar */
+    margin-top: 180px; /* Adjust for the header height */
+    padding: 20px; /* Add some padding for better readability */
+    transition: margin-left 0.3s;
+    /* background: rgba(255, 255, 255, 0.9); */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+/* When the sidebar is closed, adjust the left margin */
+#main-content.sidebar-closed {
+    margin-left: 0;
+}
+
+#navbar {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+#navbar button {
+    width: 90%;
+    padding: 12px 0;
+    margin: 0 auto;
+    background: #fff;
+    color: #4c6baf;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+#navbar button:hover {
+    background: #457ba0;
+    color: #fff;
+}
+
+#toggle-box {
+    position: relative;
+    font-size: 1.5rem; 
+    font-weight: bold;
+    width: 90%;
+    max-width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    color: #4c6baf;
+    
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 300;
+}
+
+#toggle-box.hidden {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    max-height: 0;
+    overflow: auto;
+    background-color: #f0f0f0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(-20px);
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    visibility: hidden;
+}
